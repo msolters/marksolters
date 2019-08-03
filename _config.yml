@@ -1,0 +1,102 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: (╯°□°）╯︵ ┻━┻
+name: Mark Solters
+email: msolters@gmail.com
+location: Gainesville, FL
+company: SharpSpring
+company_url: http://sharpspring.com
+github_url: https://github.com/msolters
+linkedin_url: https://www.linkedin.com/in/mark-solters-a9950863
+atmosphere_url: https://atmospherejs.com/msolters
+npm_url: https://www.npmjs.com/~msolters
+soundcloud_url: https://soundcloud.com/salty-markers
+description: >
+  Losing the fight against entropy, one bit at a time.
+favicon: favicon.png # Image must be in assets/images
+encoding: UTF-8
+repository: msolters/msolters.github.io
+
+# The base hostname & protocol for your site
+# For local test, please use http://localhost:4000
+# For production, use your github page url. ex. http://dongchuan.github.io
+#url: http://localhost:4000
+url: http://msolters.github.io
+host: 0.0.0.0
+port: 8000
+
+## Gem
+gems:
+  - jekyll-paginate
+  - jekyll-geo-pattern
+  - rouge
+  - kramdown
+  - jekyll-github-metadata
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+
+source:      .
+destination: ./_site
+
+quiet:    false
+defaults: []
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  #enable_coderay: true
+
+# Disque
+disque: marksolters.disqus.com # ex. httpdongchuangithubio.disqus.com
+
+# Pagination
+paginate: 10
+paginate_path: 'page:num'
+
+# Navigation. If you do not like these modules, just remove them :D
+navs:
+  -
+    href: /
+    label: Home
+
+  -
+    href: /open-source
+    label: Open Source
+
+#  -
+#    href: /blog
+#    label: Blog
+
+#  -
+#    href: /bookmark
+#    label: Bookmark
+
+  -
+    href: /about
+    label: About
+
+# Sidebar to show popular repo
+side_bar_repo_limit: 5 # Number of repos to show
+
+# Google Analytics
+analytics :
+  provider : google
+  google :
+      tracking_id : 'UA-78834529-1'  # ex. UA-72165600-X
+
+
+# For about.html. Fell free to create your own!
+skill_software_keywords: [C, Golang, JS, CoffeeScript, Python, Bash, NodeJS, HTML, CSS, PHP, Lua]
+skill_sre_keywords: [Kubernetes, MySQL, MongoDB, Google Cloud, AWS, Redis, Grafana, Prometheus, Linux, Systemd]
+skill_web_keywords: [Meteor, JQuery, AJAX, React, ExpressJS, Websockets]
+skill_mcu_keywords: [TI, ATMEL, 6LoWPAN, BLE, 802.15.4, Contiki, RIOT, Low-Power]

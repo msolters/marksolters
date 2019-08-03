@@ -1,0 +1,32 @@
+---
+layout: default
+css: ['sidebar-post-nav.css']
+javascript: ['underscore-min.js']
+---
+{% include jumbotron.html %}
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="row">
+      {% if page.sidebar %}
+        <div class="col-md-9 markdown-body">
+          {{ content }}
+          <!-- Comments -->
+          {% include disqus-comments.html %}
+        </div>
+
+        <div class="col-md-3 hidden-sm hidden-xs">
+          {% include sidebar-post-nav.html %}
+        </div>
+
+      {% else %}
+        <div class="col-md-12 markdown-body">
+
+            {{ content }}
+
+            <!-- Comments -->
+            {% include disqus-comments.html %}
+        </div>
+      {% endif %}
+    </div>
+
+</article>

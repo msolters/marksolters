@@ -1,0 +1,34 @@
+<h3>Post Directory</h3>
+<nav id="post-directory-spy" data-offset-top="515" data-offset-bottom="200" data-spy="affix">
+  <ul class="nav nav-pills nav-stacked"></ul>
+</nav>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $( "article h2" ).each(function( index ) {
+          var node_html = "<li><a href=\"#" + this.id + "\">" + this.textContent + "</a>";
+
+          var children = $(this).nextUntil("h2", "h3")
+          if ( children.length ) {
+            node_html += "<ul class=\"nav\">";
+            children.each(function(index) {
+              node_html += "<li><a href=\"#" + this.id + "\">" + this.textContent + "</a></li>";
+            });
+            node_html += "</ul>";
+          }
+
+          node_html += "</li>";
+
+          $("nav#post-directory-spy > ul").append( node_html );
+        });
+
+        $('nav li a').click(function(event) {
+          event.preventDefault();
+          $($(this).attr('href'))[0].scrollIntoView();
+          scrollBy(0, -0);
+        });
+
+    });
+
+</script>

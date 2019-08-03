@@ -1,0 +1,54 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: marksolters
+  labels:
+    role: marksolters
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+       maxUnavailable: 1
+       maxSurge: 2
+  selector:
+    matchLabels:
+      role: marksolters
+  template:
+    metadata:
+      labels:
+        role: marksolters
+    spec:
+      containers:
+      - name: marksolters
+        image: marksolters
+        imagePullPolicy: Always
+        ports:
+        - name: "app"
+          containerPort: 8000
+          protocol: TCP
+      - name: nginx
+        image: auto-ssl
+        imagePullPolicy: Always
+        ports:
+        - name: "http"
+          containerPort: 80
+          protocol: TCP
+        - name: "https"
+          containerPort: 443
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 250m
+            memory: 275Mi
+          requests:
+            cpu: 100m
+            memory: 90Mi
+        volumeMounts:
+        - name: nginx-config
+          mountPath: /usr/local/openresty/nginx/conf
+      volumes:
+      - name: nginx-config
+        configMap:
+          name: marksolters-nginx

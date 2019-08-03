@@ -1,0 +1,54 @@
+/** Only for index.html **/
+
+.site-header{
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.site-header #site-header-brand {
+    color: #fff;
+}
+
+.site-header .site-header-nav-item {
+    color: #fff;
+}
+
+.site-header a:hover {
+    color: #fff;
+}
+
+.jumbotron {
+    background: #4183c4;
+}
+
+.jumbotron#index-jumbotron {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.jumbotron-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+.jumbotron#index-jumbotron > .container {
+  position: relative;
+  z-index: 11;
+}
+
+.site-header.site-header-nav-scrolled a {
+    color: #2e2e2e;
+}
+
+.site-header.site-header-nav-scrolled #site-header-brand {
+    color: #2e2e2e !important;
+}
+
+.site-header.site-header-nav-scrolled a:hover {
+    color: #4183c4;
+}

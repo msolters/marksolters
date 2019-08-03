@@ -1,0 +1,18 @@
+<header class="site-header">
+    <div class="container">
+        <a id="site-header-brand" href="/" title="{{ site.name }}" class="">
+            <span class="octicon octicon-mark-github"></span>
+            <span id="title-text" class="site-header-name">{{ site.name }}</span>
+        </a>
+        <nav class="site-header-nav" role="navigation">
+            {% for nav in site.navs %}
+            <a href="{{ nav.href }}"
+               class="{% if page.menu == nav.label %} selected {% endif %} {% if (page.menu != 'home') and (page.menu != 'open-source') and (page.menu != 'about') %}{% if nav.label != "Home" %}hidden-sm hidden-xs{% endif %}{% endif %} site-header-nav-item hvr-underline-from-center"
+               target="{{ nav.target | default: _self }}"
+               title="{{ nav.label }}">
+                {{ nav.label }}
+            </a>
+            {% endfor %}
+        </nav>
+    </div>
+</header>
