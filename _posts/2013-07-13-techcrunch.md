@@ -5,7 +5,7 @@ date:       2013-07-13
 categories: programming
 ---
 
-![hackathon table]({{ site.url }}/assets/images/hackathon_sanfran.jpg)
+![hackathon table]({{ site.exturl }}/assets/images/hackathon_sanfran.jpg)
 
 I spent a fortnight of September in San Francisco for Techcrunch Disrupt 2013. I was there as a part of Angelhack, with the Chime project.
 

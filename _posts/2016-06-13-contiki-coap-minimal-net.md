@@ -13,7 +13,7 @@ I've been using `minimal-net` to quickly write, compile & run Contiki projects i
 
 While my Contiki nodes were CoAP clients, I wanted them to communicate with a server also running natively on the host computer:
 
-![contiki coap client and nodejs server]({{site.url}}/assets/images/contiki-minimal-net-coap.png)
+![contiki coap client and nodejs server]({{site.exturl}}/assets/images/contiki-minimal-net-coap.png)
 
 Unfortunately, for whatever reason, the tools provided in the example folder never seemed to get any kind of network communication working.
 
@@ -108,7 +108,7 @@ The NodeJS server will match *any* IPv6 address that is the same as `localhost`.
 
 The `minimal-net` target causes Contiki binaries to create a new `tap0` network interface on your local machine when executed.  The `tap0` interface is visible to Contiki.  By default, it's given just a link-local (`fe80`) IPv6 address.
 
-![the tap0 interface created by minimal-net]({{site.url}}/assets/images/minimal-net-tap0.png)
+![the tap0 interface created by minimal-net]({{site.exturl}}/assets/images/minimal-net-tap0.png)
 
 <div class="alert alert-danger">
   Warning:  Keep an eye on <b>ifconfig</b>.  If you find your <b>tap0</b> interface is disappearing, or fails to appear, it may be your computer's network manager.  Try to disable your host OS's networking or turning off automatic network management.
@@ -125,7 +125,7 @@ connect-minimal:
 
 I encountered no luck reaching this IP `fdfd::1` from my Contiki nodes.  I don't know why.  Investigating further, the Makefile contains this cryptic hint:
 
-![minimal-net is broken in contiki]({{site.url}}/assets/images/minimal-net-broken.png)
+![minimal-net is broken in contiki]({{site.exturl}}/assets/images/minimal-net-broken.png)
 
 Hmm.  After some experimentation, I found that link-local IPs *could* be resolved by the virtual Contiki nodes.  I randomly picked a `fe80::/64` address and added it to the `connect-minimal` target:
 
@@ -140,7 +140,7 @@ Now, we can use `make connect-minimal` to set a hardcoded IP address for our `ta
 ### Setting Server IP in Contiki
 Next, we need to enter the same IP in our Contiki firmware.  We are using the `er-example-client.c` program included in the `examples/er-rest-example` folder of the Contiki tree.  Near the top, you can override the `SERVER_NODE` macro to hard code your CoAP server's IP address.
 
-![the coap server ip macro in contiki source code]({{site.url}}/assets/images/minimal-net-server-ip.png)
+![the coap server ip macro in contiki source code]({{site.exturl}}/assets/images/minimal-net-server-ip.png)
 
 Here, you can see how we commented out the default `SERVER_NODE`, and filled in our own that contains the full IPv6 address `fe80:0:0:0:0:0:dead:beef`.
 
@@ -160,7 +160,7 @@ make connect-minimal
 
 This may require your password.  But inspecting with `ifconfig`, you should find your `tap0` interface now has a fixed IPv6 address of `fe80::dead:beef`:
 
-![minimal net tap0 static ip]({{site.url}}/assets/images/minimal-net-tap0-deadbeef.png)
+![minimal net tap0 static ip]({{site.exturl}}/assets/images/minimal-net-tap0-deadbeef.png)
 
 ### Start the Server
 Finally, you can start the NodeJS server with a simple

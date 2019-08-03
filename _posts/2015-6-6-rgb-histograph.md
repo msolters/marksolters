@@ -12,7 +12,7 @@ sidebar: true
 
 This is a quick python program I threw together to resolve one of the world's most ancient and unresolved mysteries: `blue/black` or `white/gold`?
 
-![analysis of the dress]({{ site.url }}/assets/images/rgb-dress-screenshot.jpg)
+![analysis of the dress]({{ site.exturl }}/assets/images/rgb-dress-screenshot.jpg)
 
 ## Dependencies
 ```bash

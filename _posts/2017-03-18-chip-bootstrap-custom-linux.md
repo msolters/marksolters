@@ -14,7 +14,7 @@ Here we are going to describe a process to manually build and flash a Linux dist
 *  `CHIP-buildroot` to get our CHIP Pro board-specific kernel + modules
 *  `CHIP-tools` to synthesize a NAND-ready image from the rootfs, kernel & module; then burn it to the CHIP Pro flash chip
 
-![flow chart of custom linux build and flash procedure]({{site.url}}/assets/images/chip-custom-linux-flowchart.png)
+![flow chart of custom linux build and flash procedure]({{site.exturl}}/assets/images/chip-custom-linux-flowchart.png)
 
 This article will assume an Ubuntu or other Debian-based Linux host as the machine on which development is done.  Mac and especially Windows users, may god have mercy on your souls.
 
@@ -96,7 +96,7 @@ This will auto-generate two different `rootfs` directories:
   *  Buildroot `rootfs` - Only generated if it is missing, as it is time consuming.  This will give us the kernel (`/boot`) and modules ('/lib/modules') specific to the CHIP Pro.
   *  Custom `rootfs` - The custom `rootfs` containing whatever is specified in our `multistrap` config file.
 
-Then, it will stitch these elements together into a single master `rootfs.tar`.  If you want to get into the details on this process, read on.  If you just want to put this software onto your CHIP, skip to [Flashing]({{site.url}}/programming/2017/03/18/chip-bootstrap-custom-linux.html#flashing).
+Then, it will stitch these elements together into a single master `rootfs.tar`.  If you want to get into the details on this process, read on.  If you just want to put this software onto your CHIP, skip to [Flashing]({{site.exturl}}/programming/2017/03/18/chip-bootstrap-custom-linux.html#flashing).
 
 ## Compile CHIP-buildroot
 `CHIP-buildroot` is a fork of [`buildroot`](https://buildroot.org/) that will compile a root file system, or `rootfs`, optimized for the CHIP Pro hardware.  This includes kernel modifications such as a device tree overlay corresponding to the CHIP Pro board.

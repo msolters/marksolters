@@ -167,14 +167,14 @@ Once the Sensortag is able to resolve the host and port of your OTA server, it w
 
 ## Using the srf06 Board
 
-![srf board with external flash chip]({{site.url}}/assets/images/ota-srf-board.jpg)
+![srf board with external flash chip]({{site.exturl}}/assets/images/ota-srf-board.jpg)
 
 While developing, it's helpful to have UART access to the CC26XX module.  Unfortunately, the Sensortag is very badly equipped for this purpose.  Because the devpack is required to get convenient UART communication (via USB), and because the devpack interferes with SPI which is used by the external flash, you cannot simultaneously have UART output *and* have the external flash be recognized by your firmware.  It is more convenient to use the srf06 development board and a CC2650-EM module.
 
 ### Add External Flash Chip
 First, you need to attach an external flash chip to the SRF06.  I recommend the same chip that TI uses in the Sensortag, the [W25X40CL](http://www.digikey.com/product-detail/en/winbond-electronics/W25X40CLSNIG/W25X40CLSNIG-ND/3008652?cur=USD&lang=en).
 
-![external flash circuit]({{site.url}}/assets/images/eagle-ext-flash.png)
+![external flash circuit]({{site.exturl}}/assets/images/eagle-ext-flash.png)
 
 For a ready-made breakout of the above, please see [this excellent Eagle repository](https://github.com/viccarre/W25X40_BREAKOUT) by Driblet Labs EE [Victor Carreño](https://github.com/viccarre).  This circuit should be connected to the srf06 board according to the following GPIO map.
 

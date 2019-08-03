@@ -62,7 +62,7 @@ python view-hex.py example.hex
 ```
 
 ## Example Output
-![HEX viewer output]({{ site.url }}/assets/images/hex-viewer-output.png)
+![HEX viewer output]({{ site.exturl }}/assets/images/hex-viewer-output.png)
 
 ## Breakdown
 The entire program is very brief.  We basically loop over a given file, and parse its HEX records using a helper function.

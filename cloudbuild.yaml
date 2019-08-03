@@ -6,3 +6,5 @@ steps:
       - 'SHORT_SHA=$SHORT_SHA'
       - 'CLOUDSDK_COMPUTE_ZONE=${_COMPUTE_ZONE}'
       - 'CLOUDSDK_CONTAINER_CLUSTER=${_CONTAINER_CLUSTER}'
+options:
+  machineType: 'N1_HIGHCPU_8'

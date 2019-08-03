@@ -27,7 +27,7 @@ So, in a nutshell, we have a set of modifications that will allow the GalliumOS 
 ### Use the Native 2560x1700 Resolution
 First, make sure you are using the largest system resolution available.  Go to `Settings Manager > Display`, and then select 2560x1700 from the `Resolution` dropdown.
 
-![Gallium HDPI Display Configuration]({{site.url}}/assets/images/gallium-hdpi-display.png)
+![Gallium HDPI Display Configuration]({{site.exturl}}/assets/images/gallium-hdpi-display.png)
 
 ### Increase System-Wide Fonts DPI
 While we cannot scale the DPI of all UI elements easily with GTK2, we can at least scale all fonts to be HDPI-friendly!  Go to `Settings Manager > Appearance`, and then select the `Fonts` tab.  I make two changes here:
@@ -35,7 +35,7 @@ While we cannot scale the DPI of all UI elements easily with GTK2, we can at lea
 *  Set the Custom DPI to `188` (about twice the default, 96)
 *  Set Default Font down to `9` (I find there's a big difference between 10 and 9 once the DPI has been increased)
 
-![Gallium HDPI Font Configuration]({{site.url}}/assets/images/gallium-hdpi-font.png)
+![Gallium HDPI Font Configuration]({{site.exturl}}/assets/images/gallium-hdpi-font.png)
 
 ### Use a Modified Arc Theme
 Due to the fact that XFCE is using GTK2 themes, UI elements such as window controls, buttons and check boxes cannot be trivially "scaled up."  Each element must be manually modified in the theme.  I found that Github user [@af2005](https://github.com/af2005) has already made amazing contributions to this effort by [forking the official Arc theme](https://github.com/af2005/Arc-theme-HiDPI) and making the window controls significantly larger!
@@ -53,20 +53,20 @@ This Arc theme can be installed in parallel with the `Arc*-GalliumOS` themes tha
     sudo make install
     ```
 1.  Select either `Arc`, `Arc-Dark`, or `Arc-Darker` in `Window Manager > Theme` and  `Appearance > Style`:
-    ![Gallium HDPI HDPI Arc]({{site.url}}/assets/images/gallium-hdpi-arc.png)
+    ![Gallium HDPI HDPI Arc]({{site.exturl}}/assets/images/gallium-hdpi-arc.png)
 
 ### Panel
 Right click on the Panel to open the menu, then `Panel > Panel Preferences`.
 
 *  **Panel Height**
     `Display > Measurements > Row Size = 70px`
-    ![Gallium HDPI Panel Configuration]({{site.url}}/assets/images/gallium-hdpi-panel.png)
+    ![Gallium HDPI Panel Configuration]({{site.exturl}}/assets/images/gallium-hdpi-panel.png)
 *  **Window Buttons**
     `Items > Window Buttons > Appearance > Show button labels > Off`
-    ![Gallium HDPI Window Buttons]({{site.url}}/assets/images/gallium-hdpi-window-buttons.png)
+    ![Gallium HDPI Window Buttons]({{site.exturl}}/assets/images/gallium-hdpi-window-buttons.png)
 *  **Notification Area**
     `Items > Notification Area > Maximum icon size = 60px`
-    ![Gallium HDPI Notification Area]({{site.url}}/assets/images/gallium-hdpi-notification-area.png)
+    ![Gallium HDPI Notification Area]({{site.exturl}}/assets/images/gallium-hdpi-notification-area.png)
 
 ### Use Alt-Window Resizing
 One of the biggest pains with HDPI windows is resizing them -- you have to hover your pointer in such a way as to click on some impossibly thin 1px window border.  If you didn't already know about them, the following keyboard shortcuts will change your life forever:
@@ -80,9 +80,9 @@ One of the biggest pains with HDPI windows is resizing them -- you have to hover
 ### Use Chrome, not Chromium!
 GalliumOS comes bundled with Chromium.  However, Chromium has a difficult time rendering on HDPI screens - it won't obey the font DPI settings above.  Luckily, the latest Chrome binaries work out-of-the-box on HDPI screens!  I highly recommend you use [Chrome](https://www.google.com/chrome/browser/desktop/) in lieu of Chromium:
 
-![GalliumOS at 2560x1700]({{ site.url }}/assets/images/gallium-hdpi-chrome.png)
+![GalliumOS at 2560x1700]({{ site.exturl }}/assets/images/gallium-hdpi-chrome.png)
 
 ### Atom
 Atom is an amazing text editor.  However, it's also Chrome-based, so you will encounter the same problem as Chromium above.  Fortunately, there is a great Atom plugin called [HIDPI](https://atom.io/packages/hidpi) that will scale Atom's entire UI.  (Note: this may require you to restart Atom after installing)
 
-![Atom at 2560x1700]({{ site.url }}/assets/images/gallium-hdpi-atom.png)
+![Atom at 2560x1700]({{ site.exturl }}/assets/images/gallium-hdpi-atom.png)
