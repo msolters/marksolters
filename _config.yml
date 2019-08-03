@@ -14,20 +14,19 @@ company: SharpSpring
 company_url: http://sharpspring.com
 github_url: https://github.com/msolters
 linkedin_url: https://www.linkedin.com/in/mark-solters-a9950863
-atmosphere_url: https://atmospherejs.com/msolters
 npm_url: https://www.npmjs.com/~msolters
 soundcloud_url: https://soundcloud.com/salty-markers
 description: >
   Losing the fight against entropy, one bit at a time.
 favicon: favicon.png # Image must be in assets/images
 encoding: UTF-8
-repository: msolters/msolters.github.io
+repository: msolters/marksolters
 
 # The base hostname & protocol for your site
 # For local test, please use http://localhost:4000
 # For production, use your github page url. ex. http://dongchuan.github.io
 #url: http://localhost:4000
-url: http://msolters.github.io
+url: https://marksolters.com
 host: 0.0.0.0
 port: 8000
 
@@ -96,7 +95,7 @@ analytics :
 
 
 # For about.html. Fell free to create your own!
+skill_sre_keywords: [Kubernetes, MySQL, MongoDB, Google Cloud, AWS, Vitess, Redis, Grafana, Prometheus, Linux, Systemd]
 skill_software_keywords: [C, Golang, JS, CoffeeScript, Python, Bash, NodeJS, HTML, CSS, PHP, Lua]
-skill_sre_keywords: [Kubernetes, MySQL, MongoDB, Google Cloud, AWS, Redis, Grafana, Prometheus, Linux, Systemd]
 skill_web_keywords: [Meteor, JQuery, AJAX, React, ExpressJS, Websockets]
 skill_mcu_keywords: [TI, ATMEL, 6LoWPAN, BLE, 802.15.4, Contiki, RIOT, Low-Power]
