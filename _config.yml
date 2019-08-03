@@ -95,7 +95,7 @@ analytics :
 
 
 # For about.html. Fell free to create your own!
-skill_sre_keywords: [Kubernetes, MySQL, MongoDB, Google Cloud, AWS, Vitess, Redis, Grafana, Prometheus, Linux, Systemd]
-skill_software_keywords: [C, Golang, JS, CoffeeScript, Python, Bash, NodeJS, HTML, CSS, PHP, Lua]
-skill_web_keywords: [Meteor, JQuery, AJAX, React, ExpressJS, Websockets]
+skill_sre_keywords: [Kubernetes, MySQL, MongoDB, Google Cloud, Skaffold, Ansible, AWS, Vitess, Redis, Grafana, Prometheus, Linux, Systemd]
+skill_software_keywords: [C, Golang, JS, CoffeeScript, Python, Bash, HTML, CSS, PHP, Lua]
+skill_web_keywords: [React, Meteor, NodeJS, ExpressJS, Websockets, JQuery, AJAX]
 skill_mcu_keywords: [TI, ATMEL, 6LoWPAN, BLE, 802.15.4, Contiki, RIOT, Low-Power]
