@@ -7,7 +7,7 @@ build:
   googleCloudBuild:
     projectId: ${PROJECT_ID}
   artifacts:
-  - image: marksolters
+  - image: marksolters-v1
   tagPolicy:
     envTemplate:
       template: "{{.DOCKER_REPO}}/{{.IMAGE_NAME}}:{{.GIT_HASH}}"

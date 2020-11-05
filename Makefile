@@ -1,6 +1,6 @@
 .PHONY: all build release
 
-repo=marksolters
+repo=marksolters-v1
 shorthash=$(SHORT_SHA)
 registry=gcr.io/$(PROJECT_ID)
 projectID=$(PROJECT_ID)

@@ -2,9 +2,9 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: marksolters
+  name: marksolters-v1
   labels:
-    role: marksolters
+    role: marksolters-v1
 spec:
   replicas: 1
   strategy:
@@ -14,15 +14,15 @@ spec:
        maxSurge: 2
   selector:
     matchLabels:
-      role: marksolters
+      role: marksolters-v1
   template:
     metadata:
       labels:
-        role: marksolters
+        role: marksolters-v1
     spec:
       containers:
-      - name: marksolters
-        image: marksolters
+      - name: marksolters-v1
+        image: marksolters-v1
         imagePullPolicy: Always
         ports:
         - name: "app"
@@ -51,4 +51,4 @@ spec:
       volumes:
       - name: nginx-config
         configMap:
-          name: marksolters-nginx
+          name: marksolters-v1-nginx

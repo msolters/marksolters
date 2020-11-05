@@ -20,14 +20,14 @@ description: >
   Losing the fight against entropy, one bit at a time.
 favicon: favicon.png # Image must be in assets/images
 encoding: UTF-8
-repository: msolters/marksolters
+repository: msolters/marksolters-v1
 
 # The base hostname & protocol for your site
 # For local test, please use http://localhost:4000
 # For production, use your github page url. ex. http://dongchuan.github.io
 host: 0.0.0.0
 port: 8000
-exturl: https://marksolters.com
+exturl: https://v1.marksolters.com
 
 ## Gem
 gems:

@@ -14,7 +14,7 @@ images:
   - name: auto-ssl # match images with this name
     newName: ${DOCKER_REPO}/auto-ssl # override the name
     newTag: master # override the tag
-  - name: marksolters
-    newName: ${DOCKER_REPO}/marksolters
+  - name: marksolters-v1
+    newName: ${DOCKER_REPO}/marksolters-v1
     newTag: ${GIT_HASH}
 EOF
