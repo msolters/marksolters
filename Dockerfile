@@ -1,4 +1,4 @@
-FROM ruby
+FROM ruby:2.7.1
 
 COPY . /site
 WORKDIR /site
